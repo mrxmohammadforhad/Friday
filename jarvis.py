@@ -1,4 +1,3 @@
-#prothome ei libary gula download kore niyo ar bole dei jekhane # use korchi okhane ki hobe bole debo msg diyo
 import pyttsx3 #pip install pyttsx3
 import datetime #pip install datetime
 import speech_recognition as sr
@@ -101,7 +100,7 @@ def sendemail(to, content):
 
 def screenshot():
     img = pyautogui.screenshot()
-    img.save("D:\All Project\JARVIES\screenshot.png")
+    img.save("")#put file location
 
 
 def cpu():
@@ -172,7 +171,7 @@ if __name__ == '__main__':
 
         elif "search in chrome" in query:
             speak("What should i search?")
-            chromepath = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"
+            chromepath = ""#put path location
 
             search = TakeCommand().lower()
             wb.get(chromepath).open_new_tab(search+'.com')  # only open websites with .com domain
@@ -211,7 +210,7 @@ if __name__ == '__main__':
 
         elif "open word" in query:
             speak("Opening ms word............")
-            ms_word = r"C:\Program Files (x86)\Microsoft Office\Office16\WINWORD.EXE"
+            ms_word = r""#put file location
             os.startfile(ms_word)
 
         elif "write a note" in query:
@@ -238,7 +237,7 @@ if __name__ == '__main__':
             screenshot()
 
         elif "play music" in query:
-            song_dir = "D:\Cool song"
+            song_dir = ""#put file location
             music = os.listdir(song_dir)
             speak("What should i play? sir!")
             speak("Select a number..............")
@@ -317,15 +316,6 @@ if __name__ == '__main__':
 
         elif "log out" in query:
             os.system("shutdown -l")
-
-
-        #ei code e ki jno hoiche 
-
-        # elif "restart" in query:
-        #     os.system("shutdown /r /t l")
-
-        # elif "shutdown" in query:
-        #     os.system("shutdown /s /t l")
 
 
             
