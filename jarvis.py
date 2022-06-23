@@ -20,7 +20,7 @@ import time
 #==========================================================================
 
 engine = pyttsx3.init()
-wolframalpha_app_id = "V956EV-9YAQJ8J3JA"
+wolframalpha_app_id = ""#put your id
 #for girl voice
 listener = sr.Recognizer()
 voices = engine.getProperty('voices')
